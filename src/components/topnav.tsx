@@ -16,11 +16,11 @@ export default function TopNav({}: Props) {
   }
   
   return (
-    <div className='w-full flex flex-row items-center justify-between'>
+    <div className='w-full flex flex-row items-center justify-between px-5'>
       <Link href={'/'}>
         <Image src={'/images/icon-transparent.png'} width={400} height={400} className="w-32 sm:w-48" alt="Happy Tails Logo" />
       </Link>
-      <div className='hidden sm:block sm:w-1/2 sm:flex sm:flex-row sm:justify-around sm:items-center'>
+      <div className='hidden sm:block sm:w-2/3 sm:flex sm:flex-row sm:justify-around sm:items-center'>
         <NavLinks />
         <ThemeSwitcher />
       </div>
@@ -31,7 +31,7 @@ export default function TopNav({}: Props) {
         <Image src={'/icons/menu.png'} width={32} height={32} className='' alt='a menu icon' />
       </button>
     
-      <div className={`${isOpen ? 'block' : 'hidden'} sm:hidden flex flex-col absolute top-20 right-5`}>
+      <div className={`${isOpen ? 'block' : 'hidden'} sm:hidden flex flex-col absolute top-20 right-10 w-48 bg-red-100`}>
         <NavLinks onClick={closeMenu} />
       </div>
 

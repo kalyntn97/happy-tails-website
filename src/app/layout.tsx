@@ -20,10 +20,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${mulish.className} antialised text-orange-900 min-h-screen w-screen flex flex-col bg-red-50 dark:bg-gray-800 dark:text-white`}>
+      <body className={`${mulish.className} antialised text-orange-900 min-h-screen w-full flex flex-col bg-red-50 dark:bg-gray-800 dark:text-white`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem={true}>
           <TopNav />
-          <main>{children}</main>
+          <main className='w-full'>{children}</main>
           <Footer />
         </ThemeProvider>
       </body>

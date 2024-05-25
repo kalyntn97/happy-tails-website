@@ -54,9 +54,9 @@ function Carousel() {
           {cards.map((card, index) =>
             <div key={`card-${index}`} className='relative flex flex-col sm:flex-row flex-none w-full items-center justify-around px-10 lg:px-20'>
               <div className='flex flex-col'>
-                <h1 className='text-lg xl:text-5xl lg:text-3xl md:text-2xl mb-10 font-bold'>{card.heading}</h1>
-                <h3 className='text-md xl:text-3xl lg:text-2xl md:text-xl mb-5'>{card.subHeading}</h3>
-                <p className='text-sm xl:text-2xl lg:text-xl text-stone-600'>{card.body}</p>
+                <h1 className='text-lg xl:text-5xl lg:text-3xl md:text-2xl mb-10 text-orange-700 font-bold'>{card.heading}</h1>
+                <h3 className='text-md xl:text-3xl lg:text-2xl md:text-xl mb-5 font-bold text-stone-400'>{card.subHeading}</h3>
+                <p className='text-sm xl:text-2xl lg:text-xl'>{card.body}</p>
               </div>
               <Image src={card.image} width={500} height={500} alt={`card ${index + 1} image`} className='w-3/4 xl:w-auto xl:h-3/4 lg:w-1/3 lg:h-auto md:size-80'/>
             </div>
@@ -66,7 +66,7 @@ function Carousel() {
       {/* dot navigation */}
       <div className='flex items-center justify-center'>
         {scrollSnaps.map((_, index) =>
-          <button key={`dot-${index}`} onClick={() => onDotButtonClick(index)} className={`${index === selectedIndex ? 'size-4 bg-rose-400' : 'bg-gray-300'} rounded-full size-3 mx-2 mt-10`} />
+          <button key={`dot-${index}`} onClick={() => onDotButtonClick(index)} className={`${index === selectedIndex ? 'size-4 bg-red-300' : 'bg-gray-300'} rounded-full size-3 mx-2 mt-10`} />
         )}
       </div>
     </div>

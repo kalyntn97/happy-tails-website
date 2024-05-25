@@ -20,7 +20,7 @@ function FeatureIndex() {
         {features.map((feature, index) => 
           <div key={index} className='flex flex-col w-2/3 sm:basis-1/3 m-6 p-4 bg-red-200 rounded-lg transition ease-in-out duration-300 delay-75 hover:scale-110 hover:bg-red-100'>
             <div className='flex flex-row items-center'>
-              <Image src={feature.icon} alt={`feature ${index} icon`} width={32} height={32} />
+              <Image src={feature.icon} alt={`feature ${index} icon`} width={64} height={64} className='size-6 sm:size-8'/>
               <h3 className='sm:text-xl mb-2 ml-2'>{feature.title}</h3>
               <span className={`${feature.unreleased ? 'block' : 'hidden'} rotate-12 font-bold text-stone-400 text-lg ml-2`}>Coming soon</span>
             </div>

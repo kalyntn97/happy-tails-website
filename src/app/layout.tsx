@@ -3,6 +3,7 @@ import { mulish } from '@/app/ui/fonts'
 //components
 import TopNav from '@/components/TopNav'
 import ThemeProvider from '@/components/ThemeProvider'
+import Footer from '@/components/Footer'
 
 export const metadata = {
   title: "Happy Tails",
@@ -19,10 +20,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${mulish.className} antialised text-orange-900 min-h-screen flex flex-col bg-red-50 dark:bg-gray-800 dark:text-white`}>
+      <body className={`${mulish.className} antialised text-orange-900 min-h-screen w-screen flex flex-col bg-red-50 dark:bg-gray-800 dark:text-white`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem={true}>
           <TopNav />
-          <main className='w-full flex flex-col'>{children}</main>
+          <main>{children}</main>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

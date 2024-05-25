@@ -16,9 +16,9 @@ export default function TopNav({}: Props) {
   }
   
   return (
-    <div className='w-full flex flex-row items-center justify-between sm:flex-col sm:items-center'>
+    <div className='w-full flex flex-row items-center justify-between'>
       <Link href={'/'}>
-        <Image src={'/images/icon-transparent.png'} width={400} height={400} className="w-48 sm:w-80" alt="Happy Tails Logo" />
+        <Image src={'/images/icon-transparent.png'} width={400} height={400} className="w-32 sm:w-48" alt="Happy Tails Logo" />
       </Link>
       <div className='hidden sm:block sm:w-1/2 sm:flex sm:flex-row sm:justify-around sm:items-center'>
         <NavLinks />

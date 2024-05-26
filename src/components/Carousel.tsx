@@ -5,6 +5,7 @@ import useEmblaCarousel from 'embla-carousel-react'
 import Image from 'next/image'
 import { EmblaCarouselType } from 'embla-carousel'
 import Autoplay from 'embla-carousel-autoplay'
+import Link from 'next/link'
 
 const cards = [
   { heading: 'Happy Tails - the ultimate pet app', subHeading: 'Manage everything about your pets', body: 'Multiple features and fun colors', image: '/images/carousel-1.png' },
@@ -57,8 +58,14 @@ function Carousel() {
                 <h1 className='text-lg xl:text-5xl lg:text-3xl md:text-2xl mb-10 text-orange-700 font-bold'>{card.heading}</h1>
                 <h3 className='text-md xl:text-3xl lg:text-2xl md:text-xl mb-5 font-bold text-stone-400'>{card.subHeading}</h3>
                 <p className='text-sm xl:text-2xl lg:text-xl'>{card.body}</p>
+                {/* <button className="w-48 h-12 mt-10 mb-5 bg-gradient-to-r from-red-400 to-orange-400 hover:from-orange-500 hover:to-pink-500 text-white font-bold py-3 px-6 rounded-lg shadow-lg transform transition-all duration-500 ease-in-out hover:scale-110 hover:brightness-110 hover:animate-pulse active:animate-bounce">
+                  Download
+                </button> */}
+                <Link href='/download' className="w-48 h-12 mt-10 mb-5 p-2 bg-red-50 flex items-center justify-center cursor-pointer rounded-lg border-2 border-red-400 shadow-[inset_0px_-2px_0px_1px] shadow-red-400 group hover:bg-red-400 transition duration-300 ease-in-out">
+                  <span className="font-bold text-red-400 group-hover:text-white text-lg">Download</span>
+                </Link>
               </div>
-              <Image src={card.image} width={500} height={500} alt={`card ${index + 1} image`} className='w-3/4 xl:w-auto xl:h-3/4 lg:w-1/3 lg:h-auto md:size-80'/>
+              <Image src={card.image} width={500} height={500} alt={`card ${index + 1} image`} className='w-3/4 xl:w-auto xl:h-4/5 lg:w-1/3 lg:h-auto md:size-80'/>
             </div>
           )}
         </div>

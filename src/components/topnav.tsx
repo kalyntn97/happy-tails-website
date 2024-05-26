@@ -20,18 +20,18 @@ export default function TopNav({}: Props) {
       <Link href={'/'}>
         <Image src={'/images/icon-transparent.png'} width={400} height={400} className="w-32 sm:w-48" alt="Happy Tails Logo" />
       </Link>
-      <div className='hidden sm:block sm:w-2/3 sm:flex sm:flex-row sm:justify-around sm:items-center'>
+      <div className='hidden lg:block w-full xl:w-2/3 lg:flex lg:flex-row lg:justify-around lg:items-center'>
         <NavLinks />
         <ThemeSwitcher />
       </div>
-      <div className='sm:hidden'>
+      <div className='lg:hidden'>
         <ThemeSwitcher />
       </div>
-      <button onClick={() => setIsOpen(!isOpen)} className='block sm:hidden'>
+      <button onClick={() => setIsOpen(!isOpen)} className='block lg:hidden'>
         <Image src={'/icons/menu.png'} width={32} height={32} className='' alt='a menu icon' />
       </button>
     
-      <div className={`${isOpen ? 'block' : 'hidden'} sm:hidden flex flex-col absolute top-20 right-10 w-48 bg-red-100`}>
+      <div className={`${isOpen ? 'block' : 'hidden'} lg:hidden flex flex-col absolute top-20 right-10 w-48 bg-red-100`}>
         <NavLinks onClick={closeMenu} />
       </div>
 

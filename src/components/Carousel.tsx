@@ -9,8 +9,8 @@ import Link from 'next/link'
 
 const cards = [
   { heading: 'Happy Tails - the ultimate pet app', subHeading: 'Manage everything about your pets', body: 'Multiple features and fun colors', image: '/images/carousel-1.png' },
-  { heading: 'Manage multiple pets at the same time', subHeading: 'View all care tasks and vet appointments on calendar', body: 'Easily create, edit, and delete tasks', image: '' },
-  { heading: '', subHeading: '', body: '', image: '' },
+  { heading: 'Manage multiple pets at the same time', subHeading: 'View all care tasks and vet appointments on calendar', body: 'Easily create, edit, and delete tasks', image: '/images/carousel-2.png' },
+  { heading: '', subHeading: '', body: '', image: '/images/carousel-3.png' },
 ]
 
 function Carousel() {
@@ -53,8 +53,8 @@ function Carousel() {
         <div className='flex'>
           {/* carousel slides */}
           {cards.map((card, index) =>
-            <div key={`card-${index}`} className='relative flex flex-col sm:flex-row flex-none w-full items-center justify-around px-10 lg:px-20'>
-              <div className='flex flex-col'>
+            <div key={`card-${index}`} className='relative flex flex-col sm:flex-row flex-none w-full xl:h-1/2 items-center justify-around px-10 lg:px-20 lg:px-10'>
+              <div className='flex flex-col items-center sm:items-start'>
                 <h1 className='text-lg xl:text-5xl lg:text-3xl md:text-2xl mb-10 text-orange-700 font-bold'>{card.heading}</h1>
                 <h3 className='text-md xl:text-3xl lg:text-2xl md:text-xl mb-5 font-bold text-stone-400'>{card.subHeading}</h3>
                 <p className='text-sm xl:text-2xl lg:text-xl'>{card.body}</p>
@@ -65,7 +65,7 @@ function Carousel() {
                   <span className="font-bold text-red-400 group-hover:text-white text-lg">Download</span>
                 </Link>
               </div>
-              <Image src={card.image} width={500} height={500} alt={`card ${index + 1} image`} className='w-3/4 xl:w-auto xl:h-4/5 lg:w-1/3 lg:h-auto md:size-80'/>
+              <Image src={card.image} width={1000} height={1000} alt={`card ${index + 1} image`} className='w-full h-auto xl:w-2/5 lg:w-1/3 lg:h-auto md:size-80'/>
             </div>
           )}
         </div>

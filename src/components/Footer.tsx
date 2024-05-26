@@ -4,7 +4,7 @@ type Props = {}
 
 function Footer({}: Props) {
   return (
-    <div className='w-full fixed bottom-1 '>
+    <div className='w-full pb-2'>
       <p className='text-center'>Made with ❤️ & NextJS</p>
     </div>
   )

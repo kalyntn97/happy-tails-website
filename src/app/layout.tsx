@@ -23,7 +23,7 @@ export default function RootLayout({
       <body className={`${mulish.className} antialised text-orange-900 min-h-screen w-full flex flex-col bg-red-50 dark:bg-gray-800 dark:text-white`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem={true}>
           <TopNav />
-          <main className='w-full'>{children}</main>
+          <main className='w-full content-container'>{children}</main>
           <Footer />
         </ThemeProvider>
       </body>

@@ -10,7 +10,7 @@ import Link from 'next/link'
 const cards = [
   { heading: 'Happy Tails - the ultimate pet app', subHeading: 'Manage everything about your pets', body: 'Multiple features and fun colors', image: '/images/carousel-1.png' },
   { heading: 'Manage multiple pets at the same time', subHeading: 'View all care tasks and vet appointments on calendar', body: 'Easily create, edit, and delete tasks', image: '/images/carousel-2.png' },
-  { heading: '', subHeading: '', body: '', image: '/images/carousel-3.png' },
+  { heading: '', subHeading: '', body: '', image: '/images/carousel-4.png' },
 ]
 
 function Carousel() {

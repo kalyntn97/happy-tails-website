@@ -5,12 +5,13 @@ import Lottie from "lottie-react"
 import dogAnimation from '@/animations/dog.json'
 import Image from "next/image"
 import Link from "next/link"
+import ContactLinks from "@/components/ContactLinks"
 
 const contacts = [
   { name: 'github', href: 'https://github.com/kalyntn97', icon: '/icons/github.png', iconWhite: '/icons/github-white.png' },
   { name: 'linkedin', href: 'https://www.linkedin.com/in/tran-huynh-nguyen/', icon: '/icons/linkedin.png', iconWhite: '/icons/linkedin-white.png' },
   { name: 'instagram', href: '', icon: '/icons/instagram.png', iconWhite: '/icons/instagram-white.png' },
-  { name: 'gmail', href: '', icon: '/icons/gmail.png', iconWhite: '/icons/gmail-white.png' },
+  // { name: 'gmail', href: '', icon: '/icons/gmail.png', iconWhite: '/icons/gmail-white.png' },
 ]
 
 type FormData = { name: string, email: string, message: string }
@@ -19,7 +20,6 @@ export default function Page() {
   const form = useRef<HTMLFormElement>(null)
   const initialState: FormData = { name: '', email: '', message: '' }
   const [formData, setFormData] = useState<FormData>(initialState)
-  const [subEmail, setSubEmail] = useState<string>('')
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({...formData, [e.target.name]: e.target.value})
@@ -52,23 +52,8 @@ export default function Page() {
       <div className="flex flex-col w-2/5 mr-20 justify-center">
         <Image src={'/images/img-2.png'} width={1000} height={1000} alt='a drawing of 2 dogs playing' className="w-3/4 h-auto"/>
         <h4 className="text-base sm:text-xl font-bold text-stone-500 mt-10">Get in touch with me!</h4>
-        <div className="flex w-full justify-start">
-          {contacts.map(contact =>
-            <Link href={contact.href} className="mx-10 mt-5" target="_blank">
-              <Image src={contact.icon} alt={`${contact.name} icon`} width={48} height={48} className="dark:hidden transition ease-in-out duration-300 hover:-translate-y-5" />
-              <Image src={contact.iconWhite} alt={`${contact.name} icon`} width={48} height={48} className="hidden dark:block transition ease-in-out duration-300 hover:-translate-y-5" />
-            </Link>
-          )}
-        </div>
-
-        <h4 className="text-base sm:text-xl font-bold text-stone-500 mt-10 mb-5">Subscribe to get updates about new releases</h4>
-        <div className="group overflow-hidden flex flex-row w-fit h-12 border-2 border-blue-300 rounded-md hover:border-blue-500 transition ease-in-out duration-300">
-          <input required type="text" name="subEmail" id='subEmail' value={subEmail} onChange={(e) => handleChange(e)} className="w-64 h-full rounded-sm p-2" placeholder="youremail@example.com" />
-          <button className="w-12 h-12 flex justify-center items-center bg-blue-300 group-hover:bg-blue-500 duration-300">
-            {/* <Image src={'/icons/gmail.png'} alt={`a mail icon`} width={48} height={48} className="dark:hidden size-8" /> */}
-            <Image src={'/icons/gmail-white.png'} alt={`a white mail icon`} width={48} height={48} className="size-8" />
-          </button>
-        </div>
+        <ContactLinks />
+        
       </div>
       
       <Image src={'/images/img-1.png'} width={700} height={700} alt='a drawing pet stuff' className="absolute right-0 bottom-5"/>

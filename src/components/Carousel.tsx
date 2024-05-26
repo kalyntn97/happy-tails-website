@@ -60,7 +60,7 @@ function Carousel({ cards, type, cardSize }: Props) {
         <div className='flex items-center'>
           {/* carousel slides */}
           {cards.map((card, index) =>
-            <div key={`card-${index}`} className={`relative flex flex-none ${cardSize === 'full' ? 'xl:h-1/2' : cardSize === 'sm' ? 'sm:w-1/4' : 'sm:w-1/3'} w-full h-fit items-center justify-around px-10 lg:px-20 lg:px-10`}>
+            <div key={`card-${index}`} className={`relative flex flex-none ${cardSize === 'full' ? 'xl:h-1/2' : cardSize === 'sm' ? 'lg:w-1/3 xl:w-1/4' : 'lg:w-1/2 xl:w-1/3'} w-full h-fit items-center justify-around px-10 lg:px-20 lg:px-10`}>
               {type === 'feature' && <FeatureCard key={index} card={card} />}
             </div>
           )}

@@ -9,7 +9,7 @@ export const metadata = {
   title: "Happy Tails",
   description: "A pet app",
   icons: {
-    icon: "/images/favicon.ico",
+    icon: "/icons/favicon.ico",
   },
 }
 

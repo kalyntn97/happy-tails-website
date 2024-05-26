@@ -1,4 +1,4 @@
-import Carousel from "@/components/Carousel"
+import DownloadCard from "@/components/DownLoadCard"
 import FeatureIndex from "@/components/FeatureIndex"
 import Testimonials from "@/components/Testimonials"
 import Image from "next/image"
@@ -6,7 +6,7 @@ import Image from "next/image"
 export default function Page() {
   return (
     <div className="w-full flex flex-col pb-20">
-      <Carousel />
+      <DownloadCard />
       <FeatureIndex />
       <Testimonials />
     </div>

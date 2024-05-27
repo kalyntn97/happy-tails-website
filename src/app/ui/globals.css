@@ -47,7 +47,7 @@ body {
 }
 
 .content-container {
-  min-height: calc(100vh - 10rem);
+  min-height: calc(100vh - 9.5rem);
   
 }
 

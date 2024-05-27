@@ -21,7 +21,7 @@ export default function DownloadCard() {
 
         <div className="flex flex-row items-center">
           <Link pointer-events={links.appStore.active} href='' className="mr-1">
-            <Image src={links.appStore.badge} width={500} height={250} alt='an app store badge' className="w-40 rounded-xl" />
+            <Image src={links.appStore.badge} width={500} height={250} alt='an app store badge' className="w-48 h-auto" />
           </Link>
           <Link pointer-events={links.googlePlayStore.active} href=''>
             <Image src={links.googlePlayStore.badge} width={500} height={250} alt='a google play badge' className="w-48 h-auto" />

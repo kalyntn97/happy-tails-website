@@ -29,9 +29,9 @@ function ContactLinks({ size }: Props) {
 
       <h2 className={`text-base ${size === 'sm' ? 'text-base' : 'text-base sm:text-xl mt-10 mb-5'}`}>Subscribe to get updates about new releases</h2>
       <h5 className={`${size === 'sm' ? 'text-xs': 'text-lg -mt-5'}`}>(Coming soon)</h5>
-      <div className="group overflow-hidden flex flex-row items-center w-fit h-12 border-2 border-blue-300 dark:border-green-800 rounded-md hover:border-blue-500 hover:dark:border-green-500 transition ease-in-out duration-300">
+      <div className="group overflow-hidden flex flex-row items-center w-fit h-12 border-2 border-green-700 dark:border-green-800 rounded-md hover:border-green-500 hover:dark:border-green-500 transition ease-in-out duration-300">
         <input required type="text" name="subEmail" id='subEmail' value={subEmail} onChange={e => setSubEmail(e.target.value)} className="w-64 h-full rounded-sm p-2 bg-stone-50 dark:bg-stone-800" placeholder="youremail@example.com" />
-        <button className="w-12 h-12 flex justify-center items-center bg-blue-300 dark:bg-green-700 group-hover:bg-blue-500 group-hover:dark:bg-green-500 duration-300">
+        <button className="w-12 h-12 flex justify-center items-center bg-green-700 dark:bg-green-800 group-hover:bg-green-500 group-hover:dark:bg-green-500 duration-300">
           <Image src={'/icons/gmail-white.png'} alt={`a white mail icon`} width={48} height={48} className="size-8" />
         </button>
       </div>

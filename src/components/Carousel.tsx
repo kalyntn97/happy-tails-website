@@ -64,7 +64,7 @@ function Carousel({ cards, type, cardSize }: Props) {
       {/* dot navigation */}
       <div className='flex items-center justify-center'>
         {scrollSnaps.map((_, index) =>
-          <button key={`dot-${index}`} onClick={() => onDotButtonClick(index)} className={`${index === selectedIndex ? 'size-4 bg-red-300' : 'bg-gray-300'} rounded-full size-3 mx-2 mt-10`} />
+          <button key={`dot-${index}`} onClick={() => onDotButtonClick(index)} className={`${index === selectedIndex ? 'size-4 bg-orange-300' : 'bg-stone-300'} rounded-full size-3 mx-2 mt-10`} />
         )}
       </div>
     </div>

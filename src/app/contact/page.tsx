@@ -64,7 +64,7 @@ export default function Page() {
       
       <motion.form variants={itemVariants} onSubmit={handleSubmit} ref={form} className="relative flex flex-col w-full my-10 lg:w-1/2 xl:w-1/4 sm:mt-10">
 
-        <h4 className="text-2xl sm:text-4xl font-bold mb-2 text-blue-600 dark:text-green-600">We&rsquo;d love to hear from you</h4>
+        <h4 className="text-2xl sm:text-4xl font-bold mb-2 text-green-600 dark:text-green-600">We&rsquo;d love to hear from you</h4>
         <h3 className="text-base sm:text-xl font-bold text-stone-500">Got any questions, feedback, or review? Send us a message!</h3>
 
         <label htmlFor='name' className="mt-4 text-stone-600 dark:text-stone-200">Name</label>
@@ -76,9 +76,9 @@ export default function Page() {
         <label htmlFor='message' className="mt-4 text-stone-600 dark:text-stone-200">Message</label>
         <textarea required name="message" id='message' value={formData.message} onChange={(e) => handleChange(e)} className="rounded-sm p-2 my-2 h-48 border bg-stone-50 dark:bg-stone-800" placeholder="Message"/>
 
-        <button type='submit' className="group overflow-hidden flex flex-row w-36 h-12 mt-10 bg-blue-300 dark:bg-green-700 items-center justify-center self-center rounded-lg hover:bg-blue-500 hover:dark:bg-green-500 transition ease-in-out duration-300 delay-75 hover:-translate-y-1">
+        <button type='submit' className="group overflow-hidden flex flex-row w-36 h-12 mt-10 bg-green-700 dark:bg-green-800 items-center justify-center self-center rounded-lg hover:bg-green-500 hover:dark:bg-green-500 transition ease-in-out duration-300 delay-75 hover:-translate-y-1">
           <Image src={'/icons/send.png'} alt='a paperplane icon' width={32} height={32} className="mr-4 group-hover:rotate-45 group-hover:scale-110 group-hover:translate-x-8 duration-500" />
-          <span className="group-hover:translate-x-20 duration-500 font-bold text-stone-800">SUBMIT</span>
+          <span className="group-hover:translate-x-20 duration-500 font-bold text-stone-50">SUBMIT</span>
         </button>
       </motion.form>
     </motion.div>

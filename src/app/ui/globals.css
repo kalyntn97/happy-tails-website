@@ -30,7 +30,7 @@ body {
     @apply font-bold text-stone-600 dark:text-stone-300;
   }
   h3 {
-    @apply font-bold dark:text-red-100;
+    @apply font-bold dark:text-orange-100;
   }
   h4 {
     @apply font-bold

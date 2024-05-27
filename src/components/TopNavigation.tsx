@@ -30,7 +30,7 @@ function TopNavigation() {
         <Image src={'/icons/menu.png'} width={32} height={32} className='h-full' alt='a menu icon' />
       </button>
     
-      <div className={`${isOpen ? 'block' : 'hidden'} lg:hidden flex flex-col justify-center items-center absolute top-20 right-10 w-48 bg-red-100 dark:bg-stone-800 rounded-md shadow-md z-20`}>
+      <div className={`${isOpen ? 'block' : 'hidden'} lg:hidden flex flex-col justify-center items-center absolute top-20 right-10 w-48 bg-red-100 dark:bg-stone-800 rounded-md shadow-md z-30`}>
         <NavigationLinks onClick={closeMenu} />
       </div>
 

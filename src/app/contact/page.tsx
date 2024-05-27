@@ -57,7 +57,7 @@ export default function Page() {
       <Image src={'/images/img-1.png'} width={700} height={700} alt='a drawing pet stuff' className="hidden xl-block absolute right-0 bottom-5"/>
       <form onSubmit={handleSubmit} ref={form} className="relative flex flex-col w-full my-10 lg:w-1/3 sm:mt-10">
 
-        <h4 className="text-2xl sm:text-4xl font-bold mb-2 text-blue-600 dark:text-green-600">We'd love to hear from you</h4>
+        <h4 className="text-2xl sm:text-4xl font-bold mb-2 text-blue-600 dark:text-green-600">We&rsquo;d love to hear from you</h4>
         <h3 className="text-base sm:text-xl font-bold text-stone-500">Got any questions, feedback, or review? Send us a message!</h3>
 
         <label htmlFor='name' className="mt-4 text-stone-600 dark:text-stone-200">Name</label>

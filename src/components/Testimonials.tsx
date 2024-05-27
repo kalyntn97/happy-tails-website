@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 
-const placeholderContent = `Testimonials are short quotes from people who love your brand. It's a great way to convince customers to try your services.`
+const placeholderContent = `Testimonials are short quotes from people who love your brand. It&rsquo;s a great way to convince customers to try your services.`
 const placeholderReviews = [
   { name: 'Mark & Luna', content: placeholderContent, photo: '/images/stock-1.jpg'},
   { name: 'Katie & Leroy', content: placeholderContent, photo: '/images/stock-2.jpg'},

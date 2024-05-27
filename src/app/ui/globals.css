@@ -22,6 +22,24 @@ body {
   overflow-x: hidden !important;
 }
 
+@layer base {
+  h1 {
+    @apply font-bold text-orange-700 dark:text-orange-200;
+  }
+  h2 {
+    @apply font-bold text-stone-600 dark:text-stone-300;
+  }
+  h3 {
+    @apply font-bold dark:text-red-100;
+  }
+  h4 {
+    @apply font-bold
+  }
+  h5 {
+    @apply font-bold italic text-stone-600 dark:text-stone-300;
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -29,7 +47,7 @@ body {
 }
 
 .content-container {
-  min-height: calc(100vh - 8rem);
+  min-height: calc(100vh - 10rem);
 }
 
 .clip-heart {

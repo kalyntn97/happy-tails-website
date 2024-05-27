@@ -1,33 +1,24 @@
 import Image from 'next/image'
 import React from 'react'
+import Carousel from './Carousel'
 
 const unreleased = 'Subscribe to get notified with new features'
+const placeholderImage = '/images/feature-placeholder.png'
 
 const features = [
-  { title: 'Manage every day tasks', body: 'Never forget any tasks by setting a reminder. Keep track of task completions with monthly charts.', icon: '/icons/feature-care.png' },
-  { title: 'Stay on top of vet appointments', body: 'Add custom notes to each visit', icon: '/icons/feature-health.png' },
-  { title: 'Track any pet information', body: 'Keep track of weight, mood, and more', icon: '/icons/feature-track.png' },
-  { title: 'Monitor abnormal values through graphs', body: 'Observe disease/illness lab values over time', icon: '/icons/feature-disease.png' },
-  { title: 'Share pet profiles with others', body: 'Manage pets with friends and family', icon: '/icons/feature-share.png', unreleased: true },
-  { title: 'Store health records in one place', body: 'Easy access to pet history', icon: '/icons/feature-records.png', unreleased: true },
+  { heading: 'Manage every day tasks', body: 'Never forget any tasks by setting a reminder. Keep track of task completions with monthly charts.', icon: '/icons/feature-care.png', image: '/images/feature-care-ss.png', },
+  { heading: 'Stay on top of vet appointments', body: 'See all appointments on calendar. Add notes to each visit', icon: '/icons/feature-health.png', image: '/images/feature-health-ss.png'},
+  { heading: 'Track any pet information', body: 'Keep track of weight, mood, and more. Observe changes through graphs', icon: '/icons/feature-track.png', image: '/images/feature-track-ss.png', },
+  { heading: 'Manage health conditions with medications', body: 'Track and monitor abnormal values through graphs.', icon: '/icons/feature-disease.png', image: '/images/feature-disease-ss.png', },
+  { heading: 'Share pet profiles with others', body: 'Manage pets with friends and family or share care info.', icon: '/icons/feature-share.png', image: placeholderImage, unreleased: true },
+  { heading: 'Store all pet info and records in one place', body: 'Easy access to pet health history and vet records. Take notes of important identifications and useful contacts', icon: '/icons/feature-records.png', image: placeholderImage, unreleased: true },
 ]
 
 function FeatureIndex() {
   return (
     <div className='w-full flex flex-col mt-20 sm:mt-40'>
-      <h1 className='text-2xl xl:text-4xl sm:text-3xl text-center font-bold'>Features</h1>
-      <div className='flex flex-wrap justify-center mt-5'>
-        {features.map((feature, index) => 
-          <div key={index} className='group flex flex-col w-2/3 h-28 justify-center sm:basis-1/3 m-6 p-4 bg-red-200 rounded-lg transition ease-in-out duration-300 hover:scale-110 hover:bg-red-100'>
-            <div className='flex flex-row items-center'>
-              <Image src={feature.icon} alt={`feature ${index} icon`} width={64} height={64} className='size-6 sm:size-8'/>
-              <h3 className='sm:text-xl mb-2 ml-2'>{feature.title}</h3>
-              <span className={`${feature.unreleased ? 'block' : 'hidden'} rotate-12 font-bold text-stone-400 text-lg ml-2`}>Coming soon</span>
-            </div>
-            <p className='hidden group-hover:block duration-300 delay-300 text-xs sm:text-sm ml-10'>{feature.body}</p>
-          </div>
-        )}
-      </div>
+      <h3 className='text-2xl xl:text-4xl sm:text-3xl text-center mb-20'>Features</h3>
+      <Carousel cards={features} type='feature' cardSize='md' />
     </div>
   )
 }

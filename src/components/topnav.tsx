@@ -3,8 +3,8 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import NavLinks from './NavLinks'
-import ThemeSwitcher from './ThemeSwitcher'
+import NavLinks from '@/components/NavLinks'
+import ThemeSwitcher from '@/components/ThemeSwitcher'
 
 type Props = {}
 
@@ -31,7 +31,7 @@ export default function TopNav({}: Props) {
         <Image src={'/icons/menu.png'} width={32} height={32} className='h-full' alt='a menu icon' />
       </button>
     
-      <div className={`${isOpen ? 'block' : 'hidden'} lg:hidden flex flex-col absolute top-20 right-10 w-48 bg-red-100 z-20`}>
+      <div className={`${isOpen ? 'block' : 'hidden'} lg:hidden flex flex-col absolute top-20 right-10 w-48 bg-red-100 z-10`}>
         <NavLinks onClick={closeMenu} />
       </div>
 

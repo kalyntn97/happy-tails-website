@@ -18,7 +18,7 @@ function ContactLinks({ size }: Props) {
 
   return (
     <div className={`group w-fit flex ${size === 'sm' ? 'flex-row scale-75 items-center justify-between' : 'scale-100 flex-col'}`}>
-      <div className={`flex ${size === 'sm' ? 'w-full sm:w-1/2 h-full flex justify-center items-center mr-10' : 'w-full xl:justify-start justify-center mb-10'} flex-row items-center`}>
+      <div className={`flex ${size === 'sm' ? 'w-full sm:w-1/2 h-full flex justify-center items-center mt-auto mr-10' : 'w-full xl:justify-start justify-center mb-10'} flex-row items-center`}>
         {contacts.map(contact =>
           <Link key={contact.name} href={contact.href} className="mx-10" target="_blank">
             <Image src={contact.icon} alt={`${contact.name} icon`} width={48} height={48} className="dark:hidden transition ease-in-out duration-300 hover:-translate-y-5" />

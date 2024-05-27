@@ -21,7 +21,7 @@ function NavigationLinks({ onClick }: Props) {
           return (
             <Link key={link.name} href={link.href} className={'group flex flex-row cursor-pointer w-full sm:w-48 h-12 p-2 items-center justify-center'} onClick={onClick}>
               {/* <LinkIcon /> */}
-              <Image src={'/icons/paws.png'} width={64} height={64} alt='a paws icon' className={`hidden size-8 sm:block sm:size-16 ${isActive ? 'scale-1' : 'scale-0'} ease-in-out duration-500 group-hover:rotate-6 group-hover:scale-125`} />
+              <Image src={'/icons/paws.png'} width={64} height={64} alt='a paws icon' className={`hidden size-8 sm:block sm:size-16 ${isActive ? 'scale-  1' : 'scale-0'} ease-in-out duration-500 group-hover:rotate-6 group-hover:scale-125`} />
               <p className='ml-2 sm:text-xl lg:text-2xl dark:text-orange-100'>{link.name}</p>
             </Link>
           )

@@ -10,7 +10,7 @@ type Props = {}
 
 function Footer({}: Props) {
   return (
-    <div className='w-full h-14 flex flex-row items-center justify-end self-end pb-2'>
+    <div className='w-full h-16 flex flex-row items-center justify-end self-end pb-4'>
       <ContactLinks size='sm' />
     </div>
   )

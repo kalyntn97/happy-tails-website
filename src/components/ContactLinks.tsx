@@ -18,7 +18,7 @@ function ContactLinks({ size }: Props) {
 
   return (
     <div className={`group w-full h-full flex ${size === 'sm' ? 'scale-75 items-center justify-around' : 'scale-100 flex-col'}`}>
-      <div className={`flex ${size === 'sm' ? 'w-1/3' : 'w-full mt-5'} justify-start`}>
+      <div className={`flex ${size === 'sm' ? 'lg:w-1/3' : 'w-full mt-5 xl:justify-start justify-center'}`}>
         {contacts.map(contact =>
           <Link key={contact.name} href={contact.href} className="mx-10" target="_blank">
             <Image src={contact.icon} alt={`${contact.name} icon`} width={48} height={48} className="dark:hidden transition ease-in-out duration-300 hover:-translate-y-5" />
@@ -36,6 +36,7 @@ function ContactLinks({ size }: Props) {
           <Image src={'/icons/gmail-white.png'} alt={`a white mail icon`} width={48} height={48} className="size-8" />
         </button>
       </div>
+
     </div>
   )
 }

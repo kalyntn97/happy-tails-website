@@ -48,16 +48,17 @@ export default function Page() {
   }
 
   return (
-    <div className="w-full flex flex-col sm:flex-row items-center justify-center px-10 sm:px-20">
-      <div className="flex flex-col w-2/5 mr-20 justify-center">
-        <Image src={'/images/img-2.png'} width={1000} height={1000} alt='a drawing of 2 dogs playing' className="w-3/4 h-auto"/>
-        <h4 className="text-base sm:text-xl font-bold text-stone-500 mt-10">Get in touch with me!</h4>
-        <ContactLinks />
-        
+    <div className="w-full flex flex-col lg:flex-row items-center justify-center px-5 sm:px-20">
+      <div className="flex flex-col w-full lg:w-2/5 mb-10 lg:mr-20 items-center justify-center">
+        <Image src={'/images/img-2.png'} width={1000} height={1000} alt='a drawing of 2 dogs playing' className="w-full xl:w-3/4 h-auto"/>
+        <div>
+          <h4 className="text-base sm:text-xl font-bold text-stone-500 mt-10">Get in touch with me!</h4>
+          <ContactLinks />
+        </div>
       </div>
       
-      <Image src={'/images/img-1.png'} width={700} height={700} alt='a drawing pet stuff' className="absolute right-0 bottom-5"/>
-      <form onSubmit={handleSubmit} ref={form} className="relative flex flex-col w-full mt-5 sm:w-1/3 sm:mt-10">
+      <Image src={'/images/img-1.png'} width={700} height={700} alt='a drawing pet stuff' className="hidden xl-block absolute right-0 bottom-5"/>
+      <form onSubmit={handleSubmit} ref={form} className="relative flex flex-col w-full my-10 lg:w-1/3 sm:mt-10">
 
         <h1 className="text-2xl sm:text-4xl font-bold mb-2 text-blue-600">We'd love to hear from you</h1>
         <h4 className="text-base sm:text-xl font-bold text-stone-500">Got any questions, feedback, or review? Send us a message!</h4>

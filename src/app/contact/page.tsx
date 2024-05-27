@@ -1,10 +1,7 @@
 'use client'
 import { useRef, useState } from "react"
 import emailjs from '@emailjs/browser'
-import Lottie from "lottie-react"
-import dogAnimation from '@/animations/dog.json'
 import Image from "next/image"
-import Link from "next/link"
 import ContactLinks from "@/components/ContactLinks"
 
 const contacts = [

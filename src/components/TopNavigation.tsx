@@ -5,9 +5,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import ThemeSwitcher from '@/components/ThemeSwitcher'
-import NavLinks from './nav-links'
+import NavigationLinks from './NavigationLinks'
 
-export default function TopNav() {
+function TopNavigation() {
   const [isOpen, setIsOpen] = useState<boolean>(false)
 
   const closeMenu = () => {
@@ -20,7 +20,7 @@ export default function TopNav() {
         <Image src={'/images/icon-transparent.png'} width={400} height={400} className="w-32 h-auto sm:w-48" alt="Happy Tails Logo" />
       </Link>
       <div className='hidden lg:block w-full h-full xl:w-2/3 lg:flex lg:flex-row lg:justify-around lg:items-center'>
-        <NavLinks />
+        <NavigationLinks />
         <ThemeSwitcher />
       </div>
       <div className='lg:hidden'>
@@ -31,10 +31,11 @@ export default function TopNav() {
       </button>
     
       <div className={`${isOpen ? 'block' : 'hidden'} lg:hidden flex flex-col absolute top-20 right-10 w-48 bg-red-100 z-10`}>
-        <NavLinks />
+        <NavigationLinks onClick={closeMenu} />
       </div>
 
     </div>
   )
 }
 
+export default TopNavigation

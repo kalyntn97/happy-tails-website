@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { SetStateAction } from 'react'
+import React from 'react'
 import { usePathname } from 'next/navigation'
 
 type Props = {
@@ -11,14 +11,12 @@ const links = [
   { name: 'About', href: '/about', icon: '', darkIcon: '' },
   { name: 'Contact', href: '/contact', icon: '', darkIcon: '' },
 ]
-
-export default function NavLinks({ onClick }: Props) {
+function NavigationLinks({ onClick }: Props) {
   const pathname = usePathname()
 
   return (
     <>
       {links.map(link => {
-          const LinkIcon = link.icon
           const isActive = pathname === link.href
           return (
             <Link key={link.name} href={link.href} className={'group flex flex-row cursor-pointer w-48 h-12 p-2 items-center justify-center'} onClick={onClick}>
@@ -36,3 +34,5 @@ export default function NavLinks({ onClick }: Props) {
     </>
   )
 }
+
+export default NavigationLinks

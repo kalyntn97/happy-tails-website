@@ -17,7 +17,7 @@ function TopNavigation() {
   return (
     <div className='w-full h-24 flex flex-row items-center justify-between px-5'>
       <Link href={'/'}>
-        <Image src={'/images/icon-transparent.png'} width={400} height={400} className="w-32 h-auto sm:w-48" alt="Happy Tails Logo" />
+        <Image src={'/icons/logo.png'} width={400} height={400} className="w-32 h-auto sm:w-48" alt="Happy Tails Logo" />
       </Link>
       <div className='hidden lg:block w-full h-full xl:w-2/3 lg:flex lg:flex-row lg:justify-around lg:items-center'>
         <NavigationLinks />

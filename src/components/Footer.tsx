@@ -12,7 +12,7 @@ function Footer({}: Props) {
   return (
     <div className='w-full h-12 pb-2 flex flex-row items-center'>
       <Link href={'/'}>
-        <Image src={'/images/icon-transparent.png'} width={400} height={400} className="w-24 h-auto sm:w-32" alt="Happy Tails Logo" />
+        <Image src={'/icons/logo.png'} width={400} height={400} className="w-24 h-auto sm:w-32" alt="Happy Tails Logo" />
       </Link>
       <div className='ml-auto hidden sm:block'>
         <ContactLinks size='sm' />

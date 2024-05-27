@@ -27,12 +27,11 @@ function ContactLinks({ size }: Props) {
         )}
       </div>
 
-      <h4 className={`text-base font-bold text-stone-500 ${size === 'sm' ? 'text-base' : 'text-base sm:text-xl mt-10 mb-5'}`}>Subscribe to get updates about new releases</h4>
-      <h5 className={`${size === 'sm' ? 'text-xs': 'text-lg -mt-5'} italic font-bold text-stone-400`}>(Coming soon)</h5>
-      <div className="group overflow-hidden flex flex-row items-center w-fit h-12 border-2 border-blue-300 rounded-md hover:border-blue-500 transition ease-in-out duration-300">
-        <input required type="text" name="subEmail" id='subEmail' value={subEmail} onChange={e => setSubEmail(e.target.value)} className="w-64 h-full rounded-sm p-2" placeholder="youremail@example.com" />
-        <button className="w-12 h-12 flex justify-center items-center bg-blue-300 group-hover:bg-blue-500 duration-300">
-          {/* <Image src={'/icons/gmail.png'} alt={`a mail icon`} width={48} height={48} className="dark:hidden size-8" /> */}
+      <h2 className={`text-base ${size === 'sm' ? 'text-base' : 'text-base sm:text-xl mt-10 mb-5'}`}>Subscribe to get updates about new releases</h2>
+      <h5 className={`${size === 'sm' ? 'text-xs': 'text-lg -mt-5'}`}>(Coming soon)</h5>
+      <div className="group overflow-hidden flex flex-row items-center w-fit h-12 border-2 border-blue-300 dark:border-blue-800 rounded-md hover:border-blue-500 hover:dark:border-blue-500 transition ease-in-out duration-300">
+        <input required type="text" name="subEmail" id='subEmail' value={subEmail} onChange={e => setSubEmail(e.target.value)} className="w-64 h-full rounded-sm p-2 bg-stone-50 dark:bg-stone-800" placeholder="youremail@example.com" />
+        <button className="w-12 h-12 flex justify-center items-center bg-blue-300 dark:bg-blue-700 group-hover:bg-blue-500 duration-300">
           <Image src={'/icons/gmail-white.png'} alt={`a white mail icon`} width={48} height={48} className="size-8" />
         </button>
       </div>

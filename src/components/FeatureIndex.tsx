@@ -17,7 +17,7 @@ const features = [
 function FeatureIndex() {
   return (
     <div className='w-full flex flex-col mt-20 sm:mt-40'>
-      <h1 className='text-2xl xl:text-4xl sm:text-3xl text-center font-bold mb-20'>Features</h1>
+      <h3 className='text-2xl xl:text-4xl sm:text-3xl text-center mb-20'>Features</h3>
       <Carousel cards={features} type='feature' cardSize='md' />
     </div>
   )

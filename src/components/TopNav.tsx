@@ -7,6 +7,7 @@ import Link from 'next/link'
 import ThemeSwitcher from '@/components/ThemeSwitcher'
 import NavLinks from './NavLinks'
 
+
 export default function TopNav() {
   const [isOpen, setIsOpen] = useState<boolean>(false)
 
@@ -31,7 +32,7 @@ export default function TopNav() {
       </button>
     
       <div className={`${isOpen ? 'block' : 'hidden'} lg:hidden flex flex-col absolute top-20 right-10 w-48 bg-red-100 z-10`}>
-        <NavLinks onClick={closeMenu} />
+        <NavLinks />
       </div>
 
     </div>

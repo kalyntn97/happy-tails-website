@@ -1,8 +1,11 @@
 'use client'
+
 import { useRef, useState } from "react"
+import { motion } from "framer-motion"
 import emailjs from '@emailjs/browser'
 import Image from "next/image"
 import ContactLinks from "@/components/ContactLinks"
+import { containerVariants, itemVariants } from "@/components/Layout"
 
 const contacts = [
   { name: 'github', href: 'https://github.com/kalyntn97', icon: '/icons/github.png', iconWhite: '/icons/github-white.png' },
@@ -45,17 +48,20 @@ export default function Page() {
   }
 
   return (
-    <div className="w-full flex flex-col lg:flex-row items-center justify-center px-5 sm:px-20">
-      <div className="flex flex-col w-full lg:w-2/5 mb-10 lg:mr-20 items-center justify-center">
+    <motion.div variants={containerVariants} initial='hidden' animate='visible' className="w-full flex flex-col lg:flex-row items-center justify-center px-5 sm:px-20">
+      <motion.div variants={itemVariants} className="flex flex-col w-full lg:w-2/5 mb-10 lg:mr-20 items-center justify-center">
         <Image src={'/images/img-2.png'} width={1000} height={1000} alt='a drawing of 2 dogs playing' className="w-full xl:w-3/4 h-auto"/>
         <div>
           <h2 className="text-base sm:text-xl mt-10">Get in touch with me!</h2>
           <ContactLinks />
         </div>
-      </div>
+      </motion.div>
+
+      <motion.div variants={itemVariants}>
+        <Image src={'/images/img-1.png'} width={700} height={700} alt='a drawing pet stuff' className="hidden xl-block absolute right-0 bottom-5"/>
+      </motion.div>
       
-      <Image src={'/images/img-1.png'} width={700} height={700} alt='a drawing pet stuff' className="hidden xl-block absolute right-0 bottom-5"/>
-      <form onSubmit={handleSubmit} ref={form} className="relative flex flex-col w-full my-10 lg:w-1/2 xl:w-1/4 sm:mt-10">
+      <motion.form variants={itemVariants} onSubmit={handleSubmit} ref={form} className="relative flex flex-col w-full my-10 lg:w-1/2 xl:w-1/4 sm:mt-10">
 
         <h4 className="text-2xl sm:text-4xl font-bold mb-2 text-blue-600 dark:text-green-600">We&rsquo;d love to hear from you</h4>
         <h3 className="text-base sm:text-xl font-bold text-stone-500">Got any questions, feedback, or review? Send us a message!</h3>
@@ -73,7 +79,7 @@ export default function Page() {
           <Image src={'/icons/send.png'} alt='a paperplane icon' width={32} height={32} className="mr-4 group-hover:rotate-45 group-hover:scale-110 group-hover:translate-x-8 duration-500" />
           <span className="group-hover:translate-x-20 duration-500 font-bold text-stone-800">SUBMIT</span>
         </button>
-      </form>
-    </div>
+      </motion.form>
+    </motion.div>
   );
 }

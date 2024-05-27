@@ -4,6 +4,7 @@ import React, { useCallback, useEffect, useState } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import { EmblaCarouselType } from 'embla-carousel'
 import Autoplay from 'embla-carousel-autoplay'
+//components
 import FeatureCard, { Card } from './FeatureCard'
 
 type Props = {

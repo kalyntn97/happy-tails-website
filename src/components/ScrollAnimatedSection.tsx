@@ -3,20 +3,29 @@
 import { ReactNode, useEffect, useRef } from "react"
 import { useAnimation, motion, useInView } from "framer-motion"
 //animations
-import { containerVariants, itemVariants } from "@/components/Layout"
+import { dynamicRowVariants, itemVariants } from "@/components/Layout"
 
-const ScrollAnimatedSection = ({ content }: { content: ReactNode}) => {
+type Props = { 
+  content: ReactNode, 
+  index?: number
+  col?: number
+}
+
+const ScrollAnimatedSection = ({ content, index, col }: Props) => {
   const control = useAnimation()
   const ref = useRef(null)
   const isInView = useInView(ref)
+  
+  
 
   useEffect(() => {
     isInView ? control.start('visible') : control.start('hidden')
-    console.log(isInView)
   }, [control, isInView])
 
   return (
-    <motion.div ref={ref} variants={containerVariants} initial='hidden' whileInView="visible" animate={control}>{content}</motion.div>
+    <motion.div ref={ref} variants={!!index ? dynamicRowVariants : itemVariants} initial='hidden' whileInView="visible" animate={control} custom={index} className={`${!!col && `flex flex-row items-center justify-center lg:w-1/${col}`} w-full`}>
+      {content}
+    </motion.div>
   )
 }
 

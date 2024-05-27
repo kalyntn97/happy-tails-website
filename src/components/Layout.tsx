@@ -34,6 +34,22 @@ export const itemVariants = {
   visible: { opacity: 1 },
 }
 
+export const dynamicRowVariants = {
+  hidden: { opacity: 0, x: 50 },
+  visible: (i: number) => ({
+    opacity: 1,
+    x: 0,
+    transition: {
+      delay: i * 0.2, 
+      duration: 1,
+      type: "spring",
+      stiffness: 100,
+      damping: 10, 
+    },
+  }),
+  
+}
+
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <motion.div

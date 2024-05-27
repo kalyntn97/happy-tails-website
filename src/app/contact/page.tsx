@@ -58,7 +58,8 @@ export default function Page() {
       </motion.div>
 
       <motion.div variants={itemVariants}>
-        <Image src={'/images/img-1.png'} width={700} height={700} alt='a drawing pet stuff' className="hidden xl-block absolute right-0 bottom-5"/>
+
+      <Image src={'/images/img-1.png'} width={700} height={700} alt='a drawing pet stuff' className="hidden xl-block absolute right-0 bottom-5"/>
       </motion.div>
       
       <motion.form variants={itemVariants} onSubmit={handleSubmit} ref={form} className="relative flex flex-col w-full my-10 lg:w-1/2 xl:w-1/4 sm:mt-10">

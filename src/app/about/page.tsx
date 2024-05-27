@@ -20,19 +20,19 @@ export default function Page() {
         </motion.div>
       </motion.div>
       
-      <motion.div variants={containerVariants} className="relative flex flex-col lg:flex-row w-full xl:w-2/3 lg:justify-start items-center ">
-        <ScrollAnimatedSection content={
-          <motion.div variants={itemVariants} className="flex flex-col w-full lg:w-1/2 bg-white dark:bg-stone-700 rounded-lg p-5 sm:p-20 mb-10 z-10 clip-card">
+      <div className="relative flex flex-col lg:flex-row w-full xl:w-2/3 lg:justify-start items-center ">
+        <ScrollAnimatedSection index={1} content={
+          <div className="flex flex-col w-full bg-white dark:bg-stone-700 rounded-lg p-5 sm:p-20 mb-10 z-10 clip-card">
             <h3 className="text-2xl sm:text-3xl mb-5 text-center lg:text-left">An app that can manage everything</h3>
             <p>In the midst of this overwhelming situation, the idea of Happy Tails was born. I wanted to create something that could help pet owners like me—who are juggling multiple responsibilities—keep track of their pets&rsquo; health needs in a seamless and stress-free way.<br/><br/>Levi inspired me to develop this app. His journey taught me the importance of having reliable, organized support when caring for our furry family members. I am committed to making pet care simpler and more efficient, so you can focus on what truly matters—sharing love and creating memories with your pets.<br/><br/>Thank you for trusting me to be a part of your pet care journey. Together, we can make sure our pets live healthier, happier lives.</p>
-          </motion.div>
+          </div>
         } />
-          <motion.div variants={itemVariants} className="lg:absolute w-4/5 lg:w-5/12 h-auto mb-10 lg:mr-12 right-20 z-20">
-            <ScrollAnimatedSection content={
-              <Image src={'/images/mission.png'} width={500} height={500} className="w-full h-auto object-contain" alt="a mission story" />
-            } />
-          </motion.div>
-      </motion.div>
+        <ScrollAnimatedSection index={2} content={
+          <div className="w-full h-auto mb-10 lg:mr-12 z-20">
+            <Image src={'/images/mission.png'} width={500} height={500} className="w-full h-auto object-contain" alt="a mission story" />
+          </div>
+        } />
+      </div>
     </div>
   );
 }

@@ -7,7 +7,7 @@ import Autoplay from 'embla-carousel-autoplay'
 import { motion } from 'framer-motion'
 //components
 import FeatureCard, { Card } from './FeatureCard'
-import { containerVariants, itemVariants } from './Layout'
+import { containerVariants, dynamicRowVariants, itemVariants } from './Layout'
 
 type Props = {
   cards: Card[]

@@ -8,10 +8,9 @@ export default function Page() {
 
   return (
     <div className="w-full flex flex-col pb-20">
-      <ScrollAnimatedSection content={<DownloadCard />} />
-      <FeatureIndex />
-      <Testimonials />
-
+      <ScrollAnimatedSection index={0} content={<DownloadCard />} />
+      <ScrollAnimatedSection index={1} content={<FeatureIndex />} />
+      <ScrollAnimatedSection index={2} content={<Testimonials />} />
     </div>
   )
 }

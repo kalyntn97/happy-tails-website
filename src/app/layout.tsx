@@ -16,7 +16,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${mulish.className} antialised text-orange-900 min-h-screen w-full flex flex-col bg-stone-50 dark:bg-stone-950 dark:text-red-50`}>
+      <body className={`${mulish.className} antialised text-orange-900 min-h-screen max-w-full w-full overflow-x-hidden flex flex-col bg-stone-50 dark:bg-stone-950 dark:text-red-50`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem={true}>
           <TopNavigation />
           <main className='w-full content-container'>{children}</main>

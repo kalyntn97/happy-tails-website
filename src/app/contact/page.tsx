@@ -48,7 +48,7 @@ export default function Page() {
   }
 
   return (
-    <motion.div variants={containerVariants} initial='hidden' animate='visible' className="w-full flex flex-col lg:flex-row items-center justify-center px-5 sm:px-20">
+    <motion.div variants={containerVariants} initial='hidden' animate='visible' className="w-full flex flex-col lg:flex-row items-center justify-center px-5 sm:px-20 lg:py-10 xl:py-0">
       <motion.div variants={itemVariants} className="flex flex-col w-full lg:w-2/5 mb-10 lg:mr-20 items-center justify-center">
         <Image src={'/images/img-2.png'} width={1000} height={1000} alt='a drawing of 2 dogs playing' className="w-full xl:w-3/4 h-auto"/>
         <div>

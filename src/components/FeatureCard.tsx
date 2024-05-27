@@ -16,7 +16,7 @@ type Props = {
 
 function FeatureCard({ card }: Props) {
   return (
-    <div key={card.heading} className='group overflow-hidden w-full h-[400px] sm:h-[500px] flex flex-col items-center justify-center sm-6 rounded-xl bg-stone-100 dark:bg-stone-600/70 shadow-lg transition ease-in-out duration-300'>
+    <div key={card.heading} className='group overflow-hidden w-full h-[400px] sm:h-[500px] flex flex-col items-center justify-center sm-6 rounded-xl bg-stone-100 dark:bg-stone-500/70 shadow-lg transition ease-in-out duration-300'>
       <div className='overflow-hidden w-auto h-4/5 group-hover:rotate-12 group-hover:h-3/5 duration-300'>
         <Image src={card.image} alt={`feature ${card.heading} image`} width={500} height={500} className='h-full w-auto object-contain' />
       </div>

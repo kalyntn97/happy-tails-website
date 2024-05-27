@@ -3,12 +3,11 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import NavLinks from '@/components/NavLinks'
+
 import ThemeSwitcher from '@/components/ThemeSwitcher'
+import NavLinks from './NavLinks'
 
-type Props = {}
-
-export default function TopNav({}: Props) {
+export default function TopNav() {
   const [isOpen, setIsOpen] = useState<boolean>(false)
 
   const closeMenu = () => {

@@ -1,9 +1,9 @@
 import '@/app/ui/globals.css'
 import { mulish } from '@/app/ui/fonts'
 //components
-import TopNav from '@/components/TopNav'
 import ThemeProvider from '@/components/ThemeProvider'
 import Footer from '@/components/Footer'
+import TopNav from '@/components/TopNav'
 
 export const metadata = {
   title: "Happy Tails",

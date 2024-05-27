@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import Carousel from './Carousel'
+import ScrollAnimatedSection from './ScrollAnimatedSection'
 
 const unreleased = 'Subscribe to get notified with new features'
 const placeholderImage = '/images/feature-placeholder.png'
@@ -17,8 +18,8 @@ const features = [
 function FeatureIndex() {
   return (
     <div className='w-full flex flex-col mt-20 sm:mt-40'>
-      <h3 className='text-2xl xl:text-4xl sm:text-3xl text-center mb-20'>Features</h3>
-      <Carousel cards={features} type='feature' cardSize='md' />
+      <ScrollAnimatedSection content={<h3 className='text-2xl xl:text-4xl sm:text-3xl text-center mb-20'>Features</h3>} />
+      <ScrollAnimatedSection content={<Carousel cards={features} type='feature' cardSize='md' />} />
     </div>
   )
 }

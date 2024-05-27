@@ -4,8 +4,10 @@ import React, { useCallback, useEffect, useState } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import { EmblaCarouselType } from 'embla-carousel'
 import Autoplay from 'embla-carousel-autoplay'
+import { motion } from 'framer-motion'
 //components
 import FeatureCard, { Card } from './FeatureCard'
+import { containerVariants, itemVariants } from './Layout'
 
 type Props = {
   cards: Card[]
@@ -50,14 +52,14 @@ function Carousel({ cards, type, cardSize }: Props) {
       {/* carousel viewport */}
       <div ref={emblaRef} className='overflow-hidden'>
         {/* carousel container */}
-        <div className='flex items-center'>
+        <motion.div variants={containerVariants} initial='hidden' animate='visible' className='flex items-center'>
           {/* carousel slides */}
           {cards.map((card, index) =>
-            <div key={`card-${index}`} className={`relative flex flex-none ${cardSize === 'full' ? 'xl:h-1/2' : cardSize === 'sm' ? 'lg:w-1/3 xl:w-1/4' : 'lg:w-1/2 xl:w-1/3'} w-full h-fit items-center justify-around px-10 lg:px-20 lg:px-10`}>
+            <motion.div variants={itemVariants} key={`card-${index}`} className={`relative flex flex-none ${cardSize === 'full' ? 'xl:h-1/2' : cardSize === 'sm' ? 'lg:w-1/3 xl:w-1/4' : 'lg:w-1/2 xl:w-1/3'} w-full h-fit items-center justify-around px-10 lg:px-20 lg:px-10`}>
               {type === 'feature' && <FeatureCard key={index} card={card} />}
-            </div>
+            </motion.div>
           )}
-        </div>
+        </motion.div>
       </div>
       {/* dot navigation */}
       <div className='flex items-center justify-center'>

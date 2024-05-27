@@ -21,7 +21,7 @@ export default function DownloadCard() {
         </Link>
         <h5 className="text-lg -mt-2">(Coming soon)</h5>
 
-        <motion.div variants={itemVariants} className="flex flex-row items-center">
+        <motion.div variants={itemVariants} className="flex flex-row w-full items-center justify-center">
           <Link pointer-events={links.appStore.active} href='' className="mr-1">
             <Image src={links.appStore.badge} width={500} height={250} alt='an app store badge' className="w-48 h-auto" />
           </Link>

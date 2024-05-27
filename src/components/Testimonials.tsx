@@ -17,7 +17,7 @@ function Testimonials() {
   const reviews = placeholderReviews
 
   return (
-    <div className='w-full flex flex-col mt-20 sm:mt-40 mb-10'>
+    <div className='w-full flex flex-col mt-40'>
       <ScrollAnimatedSection index={0} content={<h3 className='text-2xl xl:text-4xl sm:text-3xl text-center mb-10'>Featured Reviews</h3>} />
       
       <div className='flex flex-wrap w-full justify-center mt-5'>

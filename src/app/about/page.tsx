@@ -8,7 +8,7 @@ import ScrollAnimatedSection from "@/components/ScrollAnimatedSection";
 
 export default function Page() {
   return (
-    <div className="relative w-full flex flex-col items-center mt-10 lg:my-20">
+    <div className="relative w-full flex flex-col items-center py-10 lg:py-20">
       <h1 className="text-4xl font-bold mb-10">About us</h1>
       <motion.div variants={containerVariants} className="relative flex flex-col lg:flex-row w-full xl:w-2/3 lg:justify-end items-center mb-10">
         <motion.div variants={itemVariants} className="lg:absolute w-4/5 lg:w-1/2 h-auto mb-10 lg:mr-10 left-10 z-20 -rotate-12">
@@ -28,7 +28,7 @@ export default function Page() {
           </div>
         } />
         <ScrollAnimatedSection index={2} content={
-          <div className="w-full h-auto mb-10 lg:mr-12 z-20">
+          <div className="w-full h-auto lg:mr-12 z-20">
             <Image src={'/images/mission.png'} width={500} height={500} className="w-full h-auto object-contain" alt="a mission story" />
           </div>
         } />
